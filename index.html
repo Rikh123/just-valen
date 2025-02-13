@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be My Valentine 💖</title>
+    <link rel="stylesheet" href="css/valentine.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="valentineQuestion">Will you be my Valentine? 💘</div>
+
+      <div class="buttonContainer">
+        <button class="answerButton yesButton" onclick="location.href='thankyou.html'">
+          Yes 💖
+        </button>
+        <button class="answerButton noButton" id="noButton">
+          I no no wanna o(╥﹏╥)o
+        </button>
+      </div>
+
+      <img src="cat.gif" alt="Cat asking question" class="responsive" />
+    </div>
+
+    <script>
+      const noButton = document.getElementById("noButton");
+      const yesButton = document.querySelector(".yesButton");
+
+      function isMobile() {
+        return window.innerWidth <= 600;
+      }
+
+      noButton.addEventListener("mouseover", function () {
+        if (isMobile()) {
+          noButton.style.transform = "translateX(20px) rotate(5deg)";
+        } else {
+          let randomX = Math.random() * (window.innerWidth - 150);
+          let randomY = Math.random() * (window.innerHeight - 150);
+          noButton.style.position = "absolute";
+          noButton.style.left = `${randomX}px`;
+          noButton.style.top = `${randomY}px`;
+        }
+      });
+
+      yesButton.addEventListener("click", function () {
+        yesButton.style.transform = "scale(1.3)";
+        yesButton.style.transition = "transform 0.3s ease-in-out";
+      });
+    </script>
+  </body>
+</html>

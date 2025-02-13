@@ -1,0 +1,129 @@
+/* General Styling */
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier", monospace;
+  background-color: #fff5e4;
+  color: #ff6b81;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Food Selection Header */
+#foodquestion {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Food Selection Container */
+.food-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 80%;
+}
+
+/* Individual Food Item */
+.food-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ff6b81;
+  transition: transform 0.3s ease-in-out;
+}
+
+.food-item:hover {
+  transform: scale(1.1);
+}
+
+/* Food Images */
+.food-item img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid #ff6b81;
+  object-fit: cover;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.food-item img:hover {
+  border-color: #e63946;
+}
+
+/* Food Labels */
+.food-item label {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Checkbox Customization */
+input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Continue Button */
+.button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #ffe3e1;
+  color: #e63946;
+  border-radius: 12px;
+  border: 2px solid #ffe3e1;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(255, 107, 129, 0.5);
+}
+
+.button:hover {
+  background-color: #ff6b81;
+  color: #fff;
+  border: 2px solid #ff6b81;
+  transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #foodquestion {
+    font-size: 2rem;
+  }
+
+  .food-selection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .food-item img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
