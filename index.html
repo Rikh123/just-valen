@@ -1,110 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    head>
-
-  <meta name="msvalidate.01" content="DA4B09A39575AB94FAD9A67E1D40C716" />
-
-  <meta name="google-site-verification" content="ZDBv6VbaswJvxMNzv8dYJ8BujYuBdHM9GkGGSotBXEY" />
-
-    <!-- Bing Webmaster Tools Verification -->
-    <meta
-      name="msvalidate.01"
-      content="DA4B09A39575AB94FAD9A67E1D40C716"
-    />
-
-    <!-- Responsive Design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Metadata -->
-    <title>Be My Valentine 💖</title>
-
-    <meta
-      name="description"
-      content="A special Valentine's surprise awaits you. Will you be my Valentine? 💖"
-    />
-
-    <meta name="robots" content="index, follow" />
-
-    <link rel="canonical" href="https://www.rikhish.in/" />
-
-    <!-- Open Graph Metadata -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Be My Valentine 💖" />
-    <meta
-      property="og:description"
-      content="A special Valentine's surprise awaits you. 💖"
-    />
-    <meta property="og:url" content="https://www.rikhish.in/" />
-
-    <!-- Twitter Metadata -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Be My Valentine 💖" />
-    <meta
-      name="twitter:description"
-      content="A special Valentine's surprise awaits you. 💖"
-    />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/valentine.css" />
+<!-- Bing Verification -->
+<meta name="msvalidate.01" content="DA4B09A39575AB94FAD9A67E1D40C716" />
+<!-- Google Verification -->
+<meta name="google-site-verification" content="ZDBv6VbaswJvxMNzv8dYJ8BujYuBdHM9GkGGSotBXEY" />
+<!-- Responsive Design -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- SEO Metadata -->
+<title>Be My Valentine 💖</title>
+<meta name="description" content="A special Valentine's surprise awaits you. Will you be my Valentine? 💖" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.rikhish.in/" />
+<!-- Open Graph Metadata -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Be My Valentine 💖" />
+<meta property="og:description" content="A special Valentine's surprise awaits you. 💖" />
+<meta property="og:url" content="https://www.rikhish.in/" />
+<!-- Twitter Metadata -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Be My Valentine 💖" />
+<meta name="twitter:description" content="A special Valentine's surprise awaits you. 💖" />
+<!-- CSS -->
+<link rel="stylesheet" href="css/valentine.css" />
   </head>
-
   <body>
     <div id="container">
-
       <!-- Main H1 Heading for SEO -->
       <h1 id="valentineQuestion">
         Will you be my Valentine? 💘
       </h1>
-
-      <div class="buttonContainer">
-        <button
-          class="answerButton yesButton"
-          onclick="location.href='thankyou.html'"
-        >
-          Yes 💖
-        </button>
-
-        <button class="answerButton noButton" id="noButton">
-          I no no wanna o(╥﹏╥)o
-        </button>
-      </div>
-
-      <img
-        src="cat.gif"
-        alt="Cat asking question"
-        class="responsive"
-      />
-
-    </div>
-
-    <script>
-      const noButton = document.getElementById("noButton");
-      const yesButton = document.querySelector(".yesButton");
-
-      function isMobile() {
-        return window.innerWidth <= 600;
-      }
-
-      noButton.addEventListener("mouseover", function () {
-        if (isMobile()) {
-          noButton.style.transform = "translateX(20px) rotate(5deg)";
-        } else {
-          let randomX = Math.random() * (window.innerWidth - 150);
-          let randomY = Math.random() * (window.innerHeight - 150);
-
-          noButton.style.position = "absolute";
-          noButton.style.left = `${randomX}px`;
-          noButton.style.top = `${randomY}px`;
-        }
-      });
-
-      yesButton.addEventListener("click", function () {
-        yesButton.style.transform = "scale(1.3)";
-        yesButton.style.transition = "transform 0.3s ease-in-out";
-      });
-    </script>
+  <div class="buttonContainer">
+    <button
+      class="answerButton yesButton"
+      onclick="location.href='thankyou.html'"
+    >
+      Yes 💖
+    </button>
+    <button class="answerButton noButton" id="noButton">
+      I no no wanna o(╥﹏╥)o
+    </button>
+  </div>
+  <img
+    src="cat.gif"
+    alt="Cat asking question"
+    class="responsive"
+  />
+</div>
+<script>
+  const noButton = document.getElementById("noButton");
+  const yesButton = document.querySelector(".yesButton");
+  function isMobile() {
+    return window.innerWidth <= 600;
+  }
+  noButton.addEventListener("mouseover", function () {
+    if (isMobile()) {
+      noButton.style.transform = "translateX(20px) rotate(5deg)";
+    } else {
+      let randomX = Math.random() * (window.innerWidth - 150);
+      let randomY = Math.random() * (window.innerHeight - 150);
+      noButton.style.position = "absolute";
+      noButton.style.left = `${randomX}px`;
+      noButton.style.top = `${randomY}px`;
+    }
+  });
+  yesButton.addEventListener("click", function () {
+    yesButton.style.transform = "scale(1.3)";
+    yesButton.style.transition = "transform 0.3s ease-in-out";
+  });
+</script>
   </body>
 </html>
